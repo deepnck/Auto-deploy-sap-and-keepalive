@@ -26,7 +26,7 @@ on:
         default: false
 
 env:
-  MEMORY: 256M
+  MEMORY: 512M
 
 jobs:
   deploy:
