@@ -58,11 +58,11 @@ jobs:
       run: |
         if [ "${{ github.event.inputs.region }}" = "SG" ]; then
           echo "CF_API=https://api.cf.ap21.hana.ondemand.com" >> $GITHUB_ENV
-          RANDOM_STR=$(head /dev/urandom | tr -dc 'a-z' | head -c 6)
+          RANDOM_STR=$(head /dev/urandom | tr -dc 'a-z' | head -c 2)
           DEFAULT_APP_NAME="sg$RANDOM_STR"
         elif [ "${{ github.event.inputs.region }}" = "US" ]; then
           echo "CF_API=https://api.cf.us10-001.hana.ondemand.com" >> $GITHUB_ENV
-          RANDOM_STR=$(head /dev/urandom | tr -dc 'a-z' | head -c 6)
+          RANDOM_STR=$(head /dev/urandom | tr -dc 'a-z' | head -c 2)
           DEFAULT_APP_NAME="us$RANDOM_STR"
         fi
         
